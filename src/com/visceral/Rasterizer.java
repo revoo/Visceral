@@ -62,8 +62,11 @@ public class Rasterizer extends Bitmap {
         int handedness = area >= 0 ? 1 : 0;
 
         scanlineEdge(min_y, max_y, handedness);
+//        scanlineEdge(min_y, max_y, 0);
         scanlineEdge(min_y, mid_y, 1 - handedness);
+//        scanlineEdge(min_y, mid_y, 0);
         scanlineEdge(mid_y, max_y, 1 - handedness);
+//        scanlineEdge(mid_y, max_y, 0);
         // Output to scan buffer to eventually draw into the framebuffer
         drawScanBuffer(vertices[0].getY(), vertices[2].getY());
     }
