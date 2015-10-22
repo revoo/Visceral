@@ -28,10 +28,13 @@ public class Vector4f {
         return ( x * v2.x() + y * v2.y() + z * v2.z() + w * v2.w() );
     }
 
+    /** Computes vector cross product and returns a vector */
+    public Vector4f cross(vector4f v2) {
+        //Vector4f product
+    }
+
     public float x() { return x; }
     public float y() { return y; }
     public float z() { return z; }
     public float w() { return w; }
-
-
 }
